@@ -32,8 +32,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('courses/{course}', [CourseController::class, 'destroy'])
     ->name('courses.destroy');
 
-    Route::get('courses/{course}/duplicate', [CourseController::class, 'duplicate'])
-    ->name('courses.duplicate');    
+   Route::post('courses/{course}/duplicate', [CourseController::class, 'duplicate'])
+    ->name('courses.duplicate');  
 
 });
 
