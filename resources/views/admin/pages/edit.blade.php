@@ -11,31 +11,50 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 30px;
-            color: #222;
-        }
+   body {
+    font-family: Arial, sans-serif;
+    background: #faf6f3;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
 
         .container {
             max-width: 900px;
             margin: auto;
         }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
 
-        .header {
-            margin-bottom: 25px;
-        }
+.header h1 {
+    margin: 0 0 6px;
+}
 
-        .header h1 {
-            margin: 0 0 6px;
-        }
+.header p {
+    margin: 0;
+    color: #666;
+}
 
-        .header p {
-            margin: 0;
-            color: #666;
-        }
+.return-button {
+    display: inline-block;
+    background: #6fa8dc;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.return-button:hover {
+    background: #5b97cc;
+}
 
         .form-card {
             background: white;
@@ -110,11 +129,12 @@
             font-size: 13px;
         }
 
-        .seo-box {
-            background: #f8f9fb;
-            border-radius: 10px;
-            padding: 20px;
-        }
+ .seo-box {
+    background: #fbf7f4;
+    border: 1px solid #f0e5df;
+    border-radius: 10px;
+    padding: 20px;
+}
 
         .actions {
             display: flex;
@@ -153,37 +173,50 @@
             padding: 15px;
             margin-bottom: 20px;
         }
+  
 
-        @media (max-width: 650px) {
-            body {
-                padding: 18px;
-            }
+       @media (max-width: 650px) {
+    body {
+        padding: 18px;
+    }
 
-            .form-card {
-                padding: 20px;
-            }
+    .form-card {
+        padding: 20px;
+    }
 
-            .actions {
-                flex-direction: column;
-            }
+    .actions {
+        flex-direction: column;
+    }
 
-            .save-button,
-            .back-button {
-                width: 100%;
-                text-align: center;
-            }
-        }
+    .save-button,
+    .back-button {
+        width: 100%;
+        text-align: center;
+    }
+
+ 
+}
     </style>
 </head>
 
 <body>
 
 <div class="container">
+    <div class="edit-topbar">
 
-    <div class="header">
+   <div class="header">
+    <div>
         <h1>Modifier la page</h1>
-        <p>Modifiez le contenu et les informations SEO de cette page.</p>
+        <p>{{ $page->title }}</p>
     </div>
+
+    <a
+        href="{{ route('admin.pages.index') }}"
+        class="return-button"
+    >
+        Retour aux pages
+    </a>
+</div>
 
     @if ($errors->any())
         <div class="errors">

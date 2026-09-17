@@ -10,14 +10,13 @@
         * {
             box-sizing: border-box;
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 30px;
-            color: #222;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #faf6f3;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
 
         .container {
             max-width: 900px;
@@ -110,11 +109,12 @@
             font-size: 13px;
         }
 
-        .seo-box {
-            background: #f8f9fb;
-            border-radius: 10px;
-            padding: 20px;
-        }
+    .seo-box {
+    background: #fbf7f4;
+    border: 1px solid #f0e5df;
+    border-radius: 10px;
+    padding: 20px;
+}
 
         .actions {
             display: flex;

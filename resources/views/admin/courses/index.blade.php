@@ -7,13 +7,13 @@
     <title>Gestion du planning</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 30px;
-            color: #222;
-        }
+     body {
+    font-family: Arial, sans-serif;
+    background: #f2f7fb;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
 
         .container {
             max-width: 1000px;

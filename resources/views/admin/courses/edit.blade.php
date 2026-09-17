@@ -11,13 +11,13 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 30px;
-            color: #222;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    background: #f2f7fb;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+}
 
         .container {
             max-width: 850px;
@@ -25,18 +25,36 @@
         }
 
         .header {
-            margin-bottom: 25px;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
 
-        .header h1 {
-            margin-bottom: 6px;
-        }
+.header h1 {
+    margin: 0 0 6px;
+}
+.header p {
+    margin: 0;
+    color: #666;
+}
 
-        .header p {
-            margin: 0;
-            color: #666;
-        }
+.return-button {
+    display: inline-block;
+    background: #6fa8dc;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
 
+.return-button:hover {
+    background: #5b97cc;
+}
         .form-card {
             background: white;
             border: 1px solid #ddd;
@@ -192,9 +210,18 @@
 <div class="container">
 
     <div class="header">
+    <div>
         <h1>Modifier un cours</h1>
         <p>Modifiez les informations de ce créneau.</p>
     </div>
+
+    <a
+        href="{{ route('admin.courses.index') }}"
+        class="return-button"
+    >
+        Retour au planning
+    </a>
+</div>
 
     @if ($errors->any())
         <div class="errors">
